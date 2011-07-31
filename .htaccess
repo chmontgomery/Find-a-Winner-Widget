@@ -1,0 +1,17 @@
+# Enable the mod_expires module
+ExpiresActive On 
+# Set expiration date to 1 month for all style sheets and images
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+# Set expiration date to 1 week for all HTML pages 
+ExpiresByType text/html "access plus 1 week"
+ExpiresByType application/xhtml+xml "access plus 1 week"
+# 1 YEAR
+<FilesMatch "\.(ico)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch "\.(php|js|inc)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>

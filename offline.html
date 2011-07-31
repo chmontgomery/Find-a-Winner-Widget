@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en" manifest="winner.appcache">
+<head>
+  <title>Who's the lucky winner?</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/ico" href="icon.ico" />
+  <style type="text/css">
+    body {
+      color: #fff;
+      background-color: #14406B;
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+    a {
+      color: #fff;
+    }
+    input[type="button"] {
+      width: 100%;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    input[type="select"] {
+      cursor: pointer;
+    }
+    .button a {
+      background-color: #3D72A4;
+      padding: 3px;
+      text-decoration: none;
+      color: white;
+      border: solid 1px #fff;
+      border-radius: 0.5em;
+    }
+    .button a:hover {
+      background-color: #666;
+    }
+    .clickableSection {
+      margin-bottom: 15px;
+    }
+    .wrapper {
+      border-top: 4px solid #D29A48;
+      padding: 6px;
+    }
+    h1 {
+      margin: 0;
+      padding: 3px;
+    }
+    #grp {
+      width: 98%;
+    }
+    #items {
+      width: 98%;
+    }
+    #loadingImg {
+      margin: 10px auto;
+      display: block;
+    }
+    #winnerName {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .radioWrapper {
+      height: 30px;
+    }
+    .radioWrapper:hover {
+      cursor: pointer;
+      background-color: #6B4207;
+    }
+    .small {
+      font-size: 10px;
+    }
+    .button {
+      margin-top: 12px;
+      display: inline-block;
+    }
+    h2 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Who's the lucky winner?</h1>
+  <div class="wrapper">
+    <div>Can't decide who should clean the bathroom next? Not sure what to eat for dinner? Don't worry one more minute--simply let our randomizer choose for you!</div>
+  </div>
+  <div class="wrapper">
+    <h2>Create New Group</h2>
+    <div>Group name:</div>
+    <div><input id="grp" type="text"/></div>
+    <div>Names: (separate with spaces)</div>
+    <div><textarea id="items"></textarea></div>
+    <div><input type="button" value="Create Group" onclick="createGroup();" /></div>
+  </div>
+  <div class="wrapper">
+    <h2>Find a Winner!</h2>
+    <div id="savedGrps">
+    </div>
+    <div id="winnerButtonWrapper"><input id="getWinnerButton" type="button" value="Get a winner!" onclick="roll();" /></div>
+  </div>
+  <div class="wrapper">
+    <div>When you can't decide, choose the decision app.</div>
+    <div class="small">Made to display on mobile.</div>
+  </div>
+  <!-- including last to improve perceived performance -->
+  <script type="text/javascript" src="3rdParty.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

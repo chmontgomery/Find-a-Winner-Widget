@@ -1,0 +1,14 @@
+CACHE:
+3rdParty.js
+base.inc
+config.xml
+desktop_styles.php
+favicon.ico
+loading.gif
+main.js
+Mobile_Detect.php
+mobile_styles.php
+question_dice.jpg
+shared_styles.css
+FALLBACK:
+offline.html
