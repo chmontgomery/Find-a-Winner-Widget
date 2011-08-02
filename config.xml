@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" version="1.1">
   <name>Who is the lucky winner?</name>
-  <icon src="question_dice.jpg" />
+  <icon src="imgs/question_dice.jpg" />
   <author email="chr.montgomery@gmail.com">Chris Montgomery</author>
   <description>This widget allows the user to create groups of names or items and choose one out of the group at random.</description>
-  <content src="offline.html" />
+  <content src="winner.html" />
 </widget>

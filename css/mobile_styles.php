@@ -5,11 +5,7 @@ include 'shared_styles.css';
 ?>
 
 body {
-  color: #fff;
   background-color: #14406B;
-}
-a {
-  color: #fff;
 }
 input[type="button"] {
   width: 100%;
@@ -35,10 +31,6 @@ input[type="select"] {
 .clickableSection {
   margin-bottom: 15px;
 }
-.wrapper {
-  border-top: 4px solid #D29A48;
-  padding: 6px;
-}
 h1 {
   margin: 0;
   padding: 3px;
@@ -57,10 +49,7 @@ h1 {
   font-weight: bold;
   font-size: 20px;
 }
-.radioWrapper {
-  height: 30px;
-}
-.radioWrapper:hover {
-  cursor: pointer;
-  background-color: #6B4207;
+.wrapper {
+  border-top: 4px solid #D29A48;
+  padding: 6px;
 }

@@ -4,6 +4,7 @@
  */
 var currentWinner = "";
 var radioNum = 0;
+var missingReqFields = false;
 
 isCookieEnabled = function() {
   var cookieEnabled = (navigator.cookieEnabled) ? true : false;
@@ -54,7 +55,19 @@ getRadioHtml = function(val) {
 createGroup = function() {
   var grp = document.getElementById("grp").value;
   var items = document.getElementById("items").value;
-  //TODO validate inputs
+
+  if (!grp || !items) {
+    document.getElementById("createGroupMessage").innerHTML = "Both fields above are required.";
+    document.getElementById("grp").style.backgroundColor = "#FFFDC1";
+    document.getElementById("items").style.backgroundColor = "#FFFDC1";
+    missingReqFields = true;
+    return;
+  } else if (missingReqFields) {
+    document.getElementById("createGroupMessage").innerHTML = "";
+    document.getElementById("grp").style.backgroundColor = "#fff";
+    document.getElementById("items").style.backgroundColor = "#fff";
+    missingReqFields = false;
+  }
   
   var groups = getData("groups");
   
@@ -72,13 +85,16 @@ createGroup = function() {
   html = html + getRadioHtml(grp);
   document.getElementById("savedGrps").innerHTML = html;
   
+  document.getElementById("createGroupMessage").innerHTML = "See below for your new group.";
   //clear out data in form
   document.getElementById("grp").value = "";
   document.getElementById("items").value = "";
+  
+  return true;
 };
 
 roll = function() {
-  document.getElementById("winnerButtonWrapper").innerHTML = "<img id=\"loadingImg\" src=\"loading.gif\"/>";
+  document.getElementById("winnerButtonWrapper").innerHTML = "<img id=\"loadingImg\" src=\"imgs/loading.gif\"/>";
   
   var grp = getSelectedSavedGroup();
   if (grp) {

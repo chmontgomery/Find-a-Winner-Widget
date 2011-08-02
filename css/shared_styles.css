@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'PlaytimeWithHotToddiesRegular';
+  src: url('../fonts/laytime-webfont.eot');
+  src: url('../fonts/playtime-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/playtime-webfont.woff') format('woff'),
+       url('../fonts/playtime-webfont.ttf') format('truetype'),
+       url('../fonts/playtime-webfont.svg#PlaytimeWithHotToddiesRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: PlaytimeWithHotToddiesRegular, Helvetica, sans-serif;
+  margin: 0;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.small {
+  font-size: 10px;
+}
+.button {
+  margin-top: 12px;
+  display: inline-block;
+}
+h2 {
+  margin: 0;
+}
+.radioWrapper {
+  height: 30px;
+}
+.radioWrapper:hover {
+  cursor: pointer;
+  background-color: #6B4207;
+}
+#grp {
+  height:30px;
+}
+#createGroupMessage {
+  margin-left: 6px;
+}

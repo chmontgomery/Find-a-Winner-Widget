@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en" manifest="winner.appcache">
+<head>
+  <title>Who's the lucky winner?</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/ico" href="imgs/icon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/widget.css" />
+</head>
+<body>
+  <div id="allContent">
+    <h1>Who's the lucky winner?</h1>
+    <div id="mainContent">
+      <div id="firstWrapper" class="wrapper">
+        <div>Can't decide who should clean the bathroom next? Not sure what to eat for dinner? Don't worry one more minute--simply let our randomizer choose for you!</div>
+      </div>
+      <div class="wrapper">
+        <h2>Create New Group</h2>
+        <div>Group name:</div>
+        <div id="grpWrap"><input id="grp" type="text" required="required"/></div>
+        <div>Names: (separate with spaces)</div>
+        <div id="itemsWrap"><textarea id="items" required="required"></textarea></div>
+        <div><input type="button" value="Create Group" onclick="createGroup();" /><span id="createGroupMessage"></span></div>
+      </div>
+      <div class="wrapper">
+        <h2>Find a Winner!</h2>
+        <div id="savedGrps">
+        </div>
+        <div id="winnerButtonWrapper"><input id="getWinnerButton" type="button" value="Get a winner!" onclick="roll();" /></div>
+      </div>
+      <div class="wrapper">
+        <div>When you can't decide, choose the decision app.</div>
+      </div>
+    </div>
+  </div>
+  <!-- including last to improve perceived performance -->
+  <script type="text/javascript" src="js/3rdParty.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
