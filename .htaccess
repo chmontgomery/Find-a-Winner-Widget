@@ -15,3 +15,4 @@ Header set Cache-Control "max-age=29030400, public"
 <FilesMatch "\.(php|js|inc)$">
 Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
+AddType text/cache-manifest .appcache

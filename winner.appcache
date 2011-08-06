@@ -1,4 +1,4 @@
-CACHE:
+CACHE
 js/3rdParty.js
 js/main.js
 config.xml
@@ -10,3 +10,11 @@ fonts/playtime-webfont.eot
 fonts/playtime-webfont.svg
 fonts/playtime-webfont.ttf
 fonts/playtime-webfont.woff
+
+NETWORK:
+index.php
+Mobile_Detect.php
+base.inc
+
+FALLBACK:
+/api winner.html
